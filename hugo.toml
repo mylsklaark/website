@@ -1,0 +1,39 @@
+baseURL = 'https://example.org/'
+locale = 'en-us'
+title = 'My New Hugo Project'
+theme = "hugo-fraktur-theme"
+
+[params]
+  # Display options
+  showIntroContentOnHomepage = true
+  showPostsOnHomepage = true
+  
+  # Fonts
+  enableGoogleFonts = true 
+  googleFontsUrl = "https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=UnifrakturCook:wght@700&display=swap"
+  
+  # Analytics (optional - uncomment to use)
+  # google_analytics_id = "G-XXXXXXXXXX"
+  # plausible_analytics_domain = "example.com"
+
+[menu]
+  [[menu.main]]
+    identifier = 'home'
+    name = 'Home'
+    url = '/'
+    weight = 1
+  [[menu.main]]
+    name = "Projects"
+    identifier = "projects"
+    weight = 2
+    url = "/projects/"
+  [[menu.main]]
+    name = "About"
+    identifier = "about"
+    weight = 3
+    url = "/about/"
+  [[menu.main]]
+    name = "Contact"
+    identifier = "contact"
+    weight = 4
+    url = "/contact/"
