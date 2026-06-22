@@ -1,6 +1,6 @@
 baseURL = 'https://mylsklaark.github.io/website/'
 locale = 'en-us'
-title = 'My New Hugo Project'
+title = 'craig miles-clarke'
 theme = "hugo-fraktur-theme"
 
 [params]
