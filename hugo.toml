@@ -23,17 +23,17 @@ theme = "hugo-fraktur-theme"
     url = '/'
     weight = 1
   [[menu.main]]
-    name = "Projects"
-    identifier = "projects"
-    weight = 2
-    url = "/projects/"
-  [[menu.main]]
     name = "About"
     identifier = "about"
-    weight = 3
+    weight = 2
     url = "/about/"
   [[menu.main]]
-    name = "Contact"
-    identifier = "contact"
+    name = "Projects"
+    identifier = "projects"
+    weight = 3
+    url = "/projects/"
+  [[menu.main]]
+    name = "Pictures"
+    identifier = "pictures"
     weight = 4
-    url = "/contact/"
+    url = "/pictures/"

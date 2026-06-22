@@ -1,0 +1,25 @@
+{{ define "body_classes" }}page-photography-list{{ end }}
+
+{{ define "main" }}
+<div class="intro">
+  <h1>{{ .Title }}</h1>
+</div>
+
+<div class="content">
+  {{ .Content }}
+  <div class="album-grid">
+    {{ range .Pages }}
+    <a class="album-card" href="{{ .RelPermalink }}">
+      {{ $cover := .Resources.GetMatch (printf "%s" (.Params.cover | default "*")) }}
+      {{ if $cover }}
+        {{ $thumb := $cover.Fill "600x400 Center" }}
+        <img src="{{ $thumb.RelPermalink }}" alt="{{ .Title }}">
+      {{ end }}
+      <div class="album-card-info">
+        <h2>{{ strings.TrimRight "." .Title }}</h2>
+      </div>
+    </a>
+    {{ end }}
+  </div>
+</div>
+{{ end }}

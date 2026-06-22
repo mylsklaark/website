@@ -1,0 +1,33 @@
+{{ define "body_classes" }}page-photography-single{{ end }}
+
+{{ define "main" }}
+<div class="intro">
+  <h1>{{ .Title }}</h1>
+  {{ if .Params.description }}<p>{{ .Params.description }}</p>{{ end }}
+</div>
+
+<div class="content">
+  {{ .Content }}
+  <div class="photo-grid">
+    {{ $images := .Resources.Match "*.{jpg,jpeg,png,webp}" }}
+    {{ range $images }}
+      {{ $thumb := .Fill "400x400 Center" }}
+      <a href="{{ .RelPermalink }}" class="glightbox" data-gallery="album" data-description="{{ .Title }}">
+        <img src="{{ $thumb.RelPermalink }}" alt="{{ .Title }}" loading="lazy">
+      </a>
+    {{ end }}
+  </div>
+</div>
+{{ end }}
+
+{{ define "footer_js" }}
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox@3.3.0/dist/css/glightbox.min.css">
+<script src="https://cdn.jsdelivr.net/npm/glightbox@3.3.0/dist/js/glightbox.min.js"></script>
+<script>
+  const lightbox = GLightbox({
+    selector: '.glightbox',
+    touchNavigation: true,
+    loop: true
+  });
+</script>
+{{ end }}
