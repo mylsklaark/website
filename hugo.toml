@@ -19,21 +19,21 @@ theme = "hugo-fraktur-theme"
 [menu]
   [[menu.main]]
     identifier = 'home'
-    name = 'Home'
+    name = 'home'
     url = '/'
     weight = 1
   [[menu.main]]
-    name = "About"
+    name = "about"
     identifier = "about"
     weight = 2
     url = "/about/"
   [[menu.main]]
-    name = "Projects"
+    name = "projects"
     identifier = "projects"
     weight = 3
     url = "/projects/"
   [[menu.main]]
-    name = "Pictures"
+    name = "pictures"
     identifier = "pictures"
     weight = 4
     url = "/pictures/"
